@@ -57,5 +57,6 @@ COPY entrypoint_cron.sh /var/www/
 COPY ./src /var/www/src
 COPY entrypoint.py /var/www/
 COPY config-docker-compose.ttl /var/www/html/
+RUN touch /var/www/html/custom-templates/{landing-start,landing-end,about}/empty.twig
 
 ENTRYPOINT ["/var/www/entrypoint.sh"]
